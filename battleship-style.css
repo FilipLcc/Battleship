@@ -1,0 +1,125 @@
+.header {
+    background-image: url(battleship-assets/brod.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height:200px;
+    float:left;
+    margin-bottom: 0px;
+    font-family: Rage Italic;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+
+.menu {
+    background-color: skyblue;
+}
+
+.menuh {
+    font-family: Rage Italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.spongeBob {
+    font-size: 15px;
+    color:darkslategrey;
+
+}
+.imgleft {
+    margin: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    border-radius: 20%;
+
+}
+
+.imgright{
+    margin: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    border-radius: 20%;
+
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+}
+
+.forma {
+
+
+    text-align: center;
+}
+
+.butxs{
+    background-image: url(battleship-assets/dinghy.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+}
+
+.butsm {
+    background-image: url(battleship-assets/sm.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+}
+
+
+.butmd {
+    background-image: url(battleship-assets/md.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+
+}
+
+
+.butbg {
+    background-image: url(battleship-assets/bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+.butsz {
+    height:100px;
+width: 100px;
+color:gold;
+font-size: 12px;
+}
+
+.letters {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_style {
+    font-family: Rage Italic;
+    font-weight: bold;
+   
+}
+
+
+
+.table_style {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    user-select: none;
+    
+}

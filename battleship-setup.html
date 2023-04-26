@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <title>Battleship-Setup</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="battleship-style.css">
+       <script src="battleship-script.js"></script>
+
+
+    </head>
+<body onload = "setPageUp()">
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-12 header'>
+                Battleship clash
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 menu">
+                <h1 class="menuh">
+                    Modern sea warfare at your disposal
+                </h1>
+
+                <p>
+                    <q class="spongeBob">
+                        Captain: Are you ready kids? Kids: Aye Aye Captain. Captain: I can't hear you. Kids: Aye Aye Captain Captain: OHHHHHHH
+                    </q>
+
+
+                </p>
+
+                
+                <audio autoplay src="battleship-assets/Yu-Gi-Oh Power of Chaos Yugi The Destiny Soundtrack Single Duel (HQ) (EXTENDED).mp3" type = 'audio/mpeg'>
+
+                </audio>
+          
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 imgleft">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="battleship-assets/brod1.jpg" alt="" height="250" width=80% align='center'>
+            </div>
+            <div class="col-sm-6 menu">
+
+
+                <!--<div class='row menu letters'>
+                    <div class='col-sm-3'>
+                         <button type= 'button' class='butxs butsz' onmousedown='proba()'></button>
+                         <br/>
+                         Add a dinghy
+                        </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butsm butsz"  onmousedown='getProba()'></button>
+                        <br/>
+                        Add a warship
+                    </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butmd butsz" ></button>
+                        <br/>
+                        Add a frigate
+                    </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butbg butsz" ></button> 
+                        <br/>  
+                        Add an aircraft carrier 
+                    </div>
+
+                </div>  -->
+                <h3 class="text_style" id="head">
+
+                </h3>
+
+                <span id='setupSpan'>
+
+                </span>
+
+                <table class="table table_style">
+                    <tr id='p1A'>
+                        <td class = 'table_style' id='p1A_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_3' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1A_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1A_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+                    </tr>
+                  
+
+                    <tr id='p1B'>
+                        <td class = 'table_style' id='p1B_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_3' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1B_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1B_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+    
+
+                    </tr>
+                    <tr id='p1C'>
+                        <td class = 'table_style' id='p1C_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1C_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1C_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1D'>
+                        <td class = 'table_style' id='p1D_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_8'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1D_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1E'>
+                        <td class = 'table_style' id='p1E_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1E_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1E_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                    </tr>
+                    <tr id='p1F'>
+                        <td class = 'table_style' id='p1F_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1F_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1F_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                    </tr>
+                    <tr id='p1G'>
+                        <td class = 'table_style' id='p1G_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1G_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1G_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1H'>
+                        <td class = 'table_style' id='p1H_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1H_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1H_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1I'>
+                        <td class = 'table_style' id='p1I_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1I_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1I_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+
+                    </tr>
+                    <tr id='p1J'>
+                        <td class = 'table_style' id='p1J_1' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_2' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_3'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_4' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_5' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_6' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_7' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_8' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p1J_9' onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p1J_10'onmousedown='startSelection(this)' onmouseover='selectSpace(this)' onmouseup='endSelection(this)'>&nbsp;</td>
+
+    
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+
+                <p class='text-center'>
+                    <button type='button' class='btn btn-danger text-center' id = 'next' onclick="changeSetup()">
+                        Ready! 
+                    </button>
+
+                </p>
+              
+
+              
+
+
+            </div>
+            <div class="col-sm-3 imgright">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="battleship-assets/brod1.jpg" alt="" height="250" width=80% align='center'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </div>
+
+
+
+
+
+
+
+           
+
+
+        </div>
+
+
+    </div>
+
+         
+    <audio autoplay loop>
+        <source src='battleship-assets/Yu-Gi-Oh Power of Chaos Yugi The Destiny Soundtrack Single Duel (HQ) (EXTENDED).mp3' type="audio/mpeg">
+    </audio>
+
+
+    
+    
+</body>
+</html>

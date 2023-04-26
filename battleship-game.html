@@ -1,0 +1,431 @@
+<html>
+    <head>
+        <title>Battleship-Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="battleship-style.css">
+       <script src="battleship-script.js"></script>
+
+
+    </head>
+<body onload = "setGameUp()">
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-12 header'>
+                Battleship clash
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 menu">
+                <h1 class="menuh">
+                    Modern sea warfare at your disposal
+                </h1>
+
+                <p>
+                    <q class="spongeBob">
+
+                        <b>
+                            By ending your move, opponent's page will load in 3 seconds!
+                        </b>
+                     
+                    </q>
+
+
+                </p>
+
+                <audio autoplay src="battleship-assets/Yu-Gi-Oh Power of Chaos Yugi The Destiny Soundtrack Single Duel (HQ) (EXTENDED).mp3" type = 'audio/mpeg'>
+
+                </audio>
+
+          
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 imgleft">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="battleship-assets/brod1.jpg" alt="" height="250" width=80% align='center'>
+            </div>
+            <div class="col-sm-6 menu">
+
+
+                <!--<div class='row menu letters'>
+                    <div class='col-sm-3'>
+                         <button type= 'button' class='butxs butsz' onmousedown='proba()'></button>
+                         <br/>
+                         Add a dinghy
+                        </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butsm butsz"  onmousedown='getProba()'></button>
+                        <br/>
+                        Add a warship
+                    </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butmd butsz" ></button>
+                        <br/>
+                        Add a frigate
+                    </div>
+                    <div class='col-sm-3'>
+                        <button type= 'button' class="butbg butsz" ></button> 
+                        <br/>  
+                        Add an aircraft carrier 
+                    </div>
+
+                </div>  -->
+                <h3 class="text_style" id="head">
+
+                    <!--Player 1, make your move!-->
+
+                </h3>
+
+                <span id='span'>
+
+                </span>
+
+
+                <h5>
+                    Opponent's ships
+                </h5>
+
+                <br/>
+
+             
+       
+
+                <table class="table table_style" id = 'p1_hit'>
+                    <tr class = 'p1A_hit'>
+                        <td class = 'table_style' id='p2A_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2A_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style'  id='p2A_10' onclick = 'hit(this)'>&nbsp;</td>
+
+                    </tr>
+                  
+
+                    <tr class = 'p1B_hit'>
+                        <td class = 'table_style' id='p2B_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2B_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2B_10' onclick = 'hit(this)'>&nbsp;</td>
+    
+
+                    </tr>
+                    <tr class = 'p1C_hit'>
+                        <td class = 'table_style' id='p2C_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2C_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2C_10' onclick = 'hit(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr class = 'p1D_hit'>
+                        <td class = 'table_style' id='p2D_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2D_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style'  id='p2D_10' onclick = 'hit(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr class = 'p1E_hit'>
+                        <td class = 'table_style' id='p2E_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2E_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2E_10' onclick = 'hit(this)'>&nbsp;</td>
+                    </tr>
+                    <tr class = 'p1F_hit'>
+                        <td class = 'table_style' id='p2F_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2F_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2F_10' onclick = 'hit(this)'>&nbsp;</td>
+                    </tr>
+                    <tr class = 'p1G_hit'>
+                        <td class = 'table_style' id='p2G_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2G_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2G_10' onclick = 'hit(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr class = 'p1H_hit'>
+                        <td class = 'table_style' id='p2H_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2H_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2H_10' onclick = 'hit(this)'>&nbsp;</td>
+
+                    </tr>
+                    <tr class = 'p1I_hit'>
+                        <td class = 'table_style' id='p2I_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2I_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2I_10' onclick = 'hit(this)'>&nbsp;</td>
+
+
+                    </tr>
+                    <tr class = 'p1J_hit'>
+                        <td class = 'table_style' id='p2J_1'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_2'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_3'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_4'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_5'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_6'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_7'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_8'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class = 'table_style' id='p2J_9'  onclick = 'hit(this)'>&nbsp;</td>
+                        <td class= 'table_style'  id='p2J_10' onclick = 'hit(this)'>&nbsp;</td>
+
+    
+
+                    </tr>
+
+
+
+                </table>
+
+
+
+                <!--Alternativno, mogao sam da preko inner html dinamicki ucitam drugu tabelu, sto utice na blinkanje brodova,
+                na sekund ce skroz plavo polje da trepne pre nego sto se oboji, ali je kraci posao nego da svakom u zavisnosti od
+                vrednosti promenljivih u bazi -->
+
+
+                <h5>
+                    Your ships
+                </h5>
+
+
+
+
+
+                <table class="table table_style">
+                    <tr id='p1A_view'>
+                        <td class = 'table_style' id='p1A_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1A_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1A_10'>&nbsp;</td>
+
+                    </tr>
+                  
+
+                    <tr id='p1B_view'>
+                        <td class = 'table_style' id='p1B_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1B_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1B_10'>&nbsp;</td>
+    
+
+                    </tr>
+                    <tr id='p1C_view'>
+                        <td class = 'table_style' id='p1C_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1C_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1C_10'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1D_view'>
+                        <td class = 'table_style' id='p1D_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1D_8'>&nbsp;</td>
+                        <td class = 'table_style' id='p1D_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1D_10'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1E_view'>
+                        <td class = 'table_style' id='p1E_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1E_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1E_10'>&nbsp;</td>
+                    </tr>
+                    <tr id='p1F_view'>
+                        <td class = 'table_style' id='p1F_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1F_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1F_10'>&nbsp;</td>
+                    </tr>
+                    <tr id='p1G_view'>
+                        <td class = 'table_style' id='p1G_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1G_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1G_10'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1H_view'>
+                        <td class = 'table_style' id='p1H_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1H_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1H_10'>&nbsp;</td>
+
+                    </tr>
+                    <tr id='p1I_view'>
+                        <td class = 'table_style' id='p1I_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1I_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1I_10'>&nbsp;</td>
+
+
+                    </tr>
+                    <tr id='p1J_view'>
+                        <td class = 'table_style' id='p1J_1' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_2' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_3' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_4' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_5' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_6' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_7' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_8' >&nbsp;</td>
+                        <td class = 'table_style' id='p1J_9' >&nbsp;</td>
+                        <td class= 'table_style'  id='p1J_10'>&nbsp;</td>
+
+    
+
+                    </tr>
+
+                </table>
+
+              
+
+
+
+
+                <p class='text-center' id = 'btn_wrapper'>
+                    <button type='button' class='btn btn-success text-center' id = 'change' onclick="setTimeout(changePlayer, 3000)">
+                        End your move
+                    </button>
+
+                </p>
+              
+                
+              
+
+
+            </div>
+            <div class="col-sm-3 imgright">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="battleship-assets/brod1.jpg" alt="" height="250" width=80% align='center'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </div>
+
+
+
+           
+
+
+        </div>
+
+
+    </div>
+
+         
+    <audio autoplay loop>
+        <source src='battleship-assets/Yu-Gi-Oh Power of Chaos Yugi The Destiny Soundtrack Single Duel (HQ) (EXTENDED).mp3' type="audio/mpeg">
+    </audio>
+
+
+    
+    
+</body>
+</html>
